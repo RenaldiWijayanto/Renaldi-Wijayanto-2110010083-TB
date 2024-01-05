@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="117e7d24-8996-4402-9386-0a42e0a524bf">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="NIM" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     inputkrs.`nim` AS inputkrs_nim,
+     inputkrs.`nama` AS inputkrs_nama,
+     inputkrs.`kd_matkul` AS inputkrs_kd_matkul,
+     inputkrs.`nama_matkul` AS inputkrs_nama_matkul,
+     inputkrs.`sks` AS inputkrs_sks,
+     inputkrs.`semester` AS inputkrs_semester,
+     inputkrs.`dosen` AS inputkrs_dosen
+FROM
+     `inputkrs` inputkrs
+WHERE
+nim = $P{NIM}]]>
+	</queryString>
+	<field name="inputkrs_nim" class="java.lang.Integer"/>
+	<field name="inputkrs_nama" class="java.lang.String"/>
+	<field name="inputkrs_kd_matkul" class="java.lang.String"/>
+	<field name="inputkrs_nama_matkul" class="java.lang.String"/>
+	<field name="inputkrs_sks" class="java.lang.String"/>
+	<field name="inputkrs_semester" class="java.lang.String"/>
+	<field name="inputkrs_dosen" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="21" y="0" width="519" height="60" uuid="b250e00c-ebc8-4d4b-8670-b631d7be0906"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNIVERSITAS ISLAM KALIMANTAN (UNISKA)
+MUHAMMAD ARSYAD AL-BANJARI
+BANJARMASIN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="172" y="0" width="212" height="20" uuid="b24e865d-fec2-4ad7-91f4-d9fb6ff38a9e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KARTU RENCANA STUDI (KRS)]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="101" splitType="Stretch">
+			<staticText>
+				<reportElement x="17" y="81" width="23" height="20" uuid="29935bd5-a830-496b-adf1-40c7fae3fdac"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="18" y="41" width="41" height="20" uuid="cc962c81-ee98-45f1-ad9b-631234421ef9"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[NIM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="18" y="21" width="41" height="20" uuid="1d088e81-139a-4c5a-83d7-018107bd1b5d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[NAMA]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="41" width="137" height="20" uuid="abe7a5e9-692d-407e-887b-0b43bd9f69c9"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inputkrs_nim}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="21" width="137" height="20" uuid="d4322266-1918-4017-956c-43b61cc49588"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inputkrs_nama}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="59" y="21" width="21" height="20" uuid="440f7d98-a296-4c7f-a57d-69a931270a09"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="59" y="41" width="21" height="20" uuid="d3416049-c841-4be0-ab32-9fae326fa3b5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="81" width="73" height="20" uuid="45e9d778-f15d-4c8f-b0b4-422950c8b2f3"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[KD MATKUL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="113" y="81" width="179" height="20" uuid="95afd0e0-2a0f-46d2-96cd-7aa817203451"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MATA KULIAH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="81" width="149" height="20" uuid="6b28c025-2f32-4b5e-872c-6c7772f2e90c"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DOSEN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="441" y="81" width="34" height="20" uuid="941d81af-2da5-4c2f-8038-0083675a71b6"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SKS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="475" y="81" width="65" height="20" uuid="3fd44810-e20e-4b58-a648-9a3ff4595451"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SEMESTER]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="17" y="0" width="23" height="20" uuid="cc24db40-e499-4ee0-82ab-34b8113ec6b9"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="0" width="73" height="20" uuid="a378d978-dac7-4d95-9366-fa1232c810ee"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{inputkrs_kd_matkul}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="0" width="179" height="20" uuid="54261383-e6b7-4526-8ad3-8aaff72d34a7"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inputkrs_nama_matkul}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="292" y="0" width="149" height="20" uuid="fd033d9b-7fbf-442c-91fa-dbe3975b43a4"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inputkrs_dosen}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="441" y="0" width="34" height="20" uuid="82c4f0ad-2ac3-4b43-9045-b497d5d625d7"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{inputkrs_sks}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="475" y="0" width="65" height="20" uuid="3592db4e-aae7-4026-b354-fe91a246a346"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{inputkrs_semester}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
